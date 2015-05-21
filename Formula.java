@@ -17,11 +17,6 @@ public class Formula {
 			x[0] = (-b + Math.sqrt(d)) / (2*a);
 			x[1] = (-b - Math.sqrt(d)) / (2*a);
 			
-		}else{
-			
-			x[0] = -999;
-			x[1] = -999;
-			
 		}
 
 		
