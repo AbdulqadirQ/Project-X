@@ -1,35 +1,43 @@
-// class contains a list of components used by the module class		***UPDATE COUNTER - CLASS CONTAINS (3) COMPONENTS***
+/*
+	Class provides the application with a way to compute a solutions to a quadratic equation. 
+	Error Handling, Computation and output are all handled here. 
+*/
 class quadratic_Components 
 {
-	/*(1) component 1 accepts input
+	/* Error Handling Component 
+	 * Checks parameters for invalid values. 
 	 * returns double array of values
 	 */
 	protected double[] error_Handling_Component(double a, double b, double c)
 	{
-		double[] input = {a,b,c}; // holds the input values	
+		//Holds the input values ready for validation. 
+		double[] input = {a,b,c}; 
+
+		//TODO - validation of inputs
+
+		//Return the array. 
 		return input;
 	}
 	
 	
-	
-	/*(2) component 2 takes an array of values and applies quadratic formula
-	 * returns array containing solution(s)
+	/* Quadratic component computes a solution to the parameters. 
+	 * returns array containing solutions
 	 */
 	protected double[] quadratic_Component(double[] input)
 	{
-		// apply formula and hold output in new solution array
+		//Find a solution to the quadratic equation parameters. 
 		double[] solution = Formula.quadraticEquation(input[0], input[1], input[2]);	
+		//Return array 
 		return solution;	
 	}
 	
-	
-	
-	/*(3) component 3 links to graphical interface
+	/* Output Component 
+	 * links to graphical interface
 	 * passes solution array to GUI
 	 */
 	protected double[] output_Component(double[] solution)
 	{
-		// for test purposes print
+		// or test purposes print
 		Test.print(solution);
 		return solution;
 	}
