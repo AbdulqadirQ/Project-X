@@ -6,7 +6,7 @@ public class quadratic_Module extends quadratic_Components
 	{
 		// c1 ---> c2 ---> c3 ---> output
 		//Parameters are checked for error handling, computed for a result and passed to ouput. 
-		output_Component(quadratic_Component(error_Handling_Component(a,b,c)));
+		output_Component(quadratic_Component(input_Component(a,b,c)));
 		
 	}
 	

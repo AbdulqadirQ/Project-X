@@ -2,20 +2,21 @@
 	Class provides the application with a way to compute a solutions to a quadratic equation. 
 	Error Handling, Computation and output are all handled here. 
 */
-class quadratic_Components 
+class quadratic_Components extends Quadratic_Error_Handling 
 {
 	/* Error Handling Component 
 	 * Checks parameters for invalid values. 
 	 * returns double array of values
 	 */
-	protected double[] error_Handling_Component(double a, double b, double c)
+	protected double[] input_Component(double a, double b, double c)
 	{
 		//Holds the input values ready for validation. 
 		double[] input = {a,b,c}; 
-
-		//TODO - validation of inputs
-
-		//Return the array. 
+		
+		// check valid is input, returns boolean value
+		boolean is_valid = input_Component_Error_Handling(input);
+		
+		//Return the array if is_valid is true 
 		return input;
 	}
 	
