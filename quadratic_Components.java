@@ -8,7 +8,7 @@ class quadratic_Components extends Quadratic_Error_Handling
 	 * Checks parameters for invalid values. 
 	 * returns double array of values
 	 */
-	protected double[] input_Component(double a, double b, double c)
+	protected static double[] input_Component(double a, double b, double c)
 	{
 		//Holds the input values ready for validation. 
 		double[] input = {a,b,c}; 
@@ -24,7 +24,7 @@ class quadratic_Components extends Quadratic_Error_Handling
 	/* Quadratic component computes a solution to the parameters. 
 	 * returns array containing solutions
 	 */
-	protected double[] quadratic_Component(double[] input)
+	protected static double[] quadratic_Component(double[] input)
 	{
 		//Find a solution to the quadratic equation parameters. 
 		double[] solution = Formula.quadraticEquation(input[0], input[1], input[2]);	
@@ -36,7 +36,7 @@ class quadratic_Components extends Quadratic_Error_Handling
 	 * links to graphical interface
 	 * passes solution array to GUI
 	 */
-	protected double[] output_Component(double[] solution)
+	protected static double[] output_Component(double[] solution)
 	{
 		// or test purposes print
 		Test.print(solution);

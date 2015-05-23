@@ -1,30 +1,45 @@
-
-/* 
- * Do not write test code here.
- * Use class to call test code.
- * Code should primarily test components
- * module code should be tested via custom test cases
- * 
- */
-
-public class Test {
+// test components and/or modules here.
+// do not change code, change input
+import java.util.Scanner;
+public class Test { 
 	
+
+	// main method for tests
 	public static void main(String[]args){
-		
+		System.out.println("Running Test...");
+		get_Input_Data();
+
 	}
-	
-	
+
 	
 	// print an array
-	static void print(double[] arr){
+	public static void print(double[] arr){
 		
 		for(int i = 0; i < arr.length; i++){
 			System.out.println(arr[i]);	
 		}	
 	}
-	
-	
-	
+
+
+	// get input for quadratic equation tests
+	public static double a, b, c;
+	public static void get_Input_Data(){
+			Scanner scan = new Scanner(System.in);
+			System.out.println("a=");
+			a = scan.nextDouble();
+
+			System.out.println("b=");
+			b = scan.nextDouble();
+
+			System.out.println("c=");
+			c = scan.nextDouble();
+
+			// run formula
+			quadratic_Module.quadratic_Equation_Module(a, b, c);
+	}
+
+
+
 
 }
 /* DELETE LATER

@@ -4,7 +4,7 @@
 
 class Quadratic_Error_Handling {
 	
-	protected boolean input_Component_Error_Handling(double[] input){
+	protected static boolean input_Component_Error_Handling(double[] input){
 		
 		// check the input is valid
 		boolean is_valid = false;
