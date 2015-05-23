@@ -2,7 +2,7 @@
 class Formula 
 {
 	// Quadratic equation formula
-	public double[] quadraticEquation(double a, double b, double c)
+	public static double[] quadraticEquation(double a, double b, double c)
 	{ //Take in three variables as parameters
 
 		double[] solution = {-999, -999}; // changed this and return type to a 1D double array due to 2 outputs
