@@ -1,3 +1,4 @@
+import java.util.ArrayList; 
 
 public class PrimeGen
 {	
@@ -5,7 +6,22 @@ public class PrimeGen
 	public ArrayList<Integer> generate(int n)
 	{
 		ArrayList<Integer> list = genList(n); 
-		
+		for(int i=0; i<list.size(); i++)
+		{
+			Integer currentVal = list.get(i); 
+
+			for(int j=i+1; j<list.size(); j++)
+			{
+				if(list.get(j)%currentVal==0)
+				{
+					list.remove(j); 
+				}
+			}
+
+			//System.out.println(list.get(i)); 
+		}
+
+		return list; 
 	}
 
 	//Generate a list from 2 to n. 
@@ -21,5 +37,17 @@ public class PrimeGen
 		}
 		//Return list. 
 		return list; 
+	}
+
+
+	public static void main(String[] args)
+	{
+		PrimeGen gen = new PrimeGen(); 
+		ArrayList<Integer> arr = gen.generate(100);
+
+		for(int i=0; i<arr.size(); i++)
+		{
+			System.out.println(arr.get(i)); 
+		} 
 	}
 }
