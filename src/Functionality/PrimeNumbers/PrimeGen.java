@@ -1,6 +1,7 @@
 import java.util.ArrayList; 
 
 //Class implements the sieve of erathones algorithm to find prime numbers up to a certain limit. 
+//TODO could develop a better algorithm for generate function as current complexity is O(n^2)
 public class PrimeGen
 {	
 	//Generate prime number up to a limit. 
