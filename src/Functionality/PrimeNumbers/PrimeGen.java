@@ -1,26 +1,32 @@
 import java.util.ArrayList; 
 
+//Class implements the sieve of erathones algorithm to find prime numbers up to a certain limit. 
 public class PrimeGen
 {	
 	//Generate prime number up to a limit. 
 	public ArrayList<Integer> generate(int n)
 	{
+		//Call the genList function to population the list with all numbers up to n. 
 		ArrayList<Integer> list = genList(n); 
+
+		//For each value in the list. 
 		for(int i=0; i<list.size(); i++)
-		{
+		{	
+			//Store the current value 
 			Integer currentVal = list.get(i); 
 
+			//For the rest of the lists. 
 			for(int j=i+1; j<list.size(); j++)
 			{
+				//If the current list value is fully divisible from the currrent value
 				if(list.get(j)%currentVal==0)
 				{
+					//Remove the value from the list as it is a composite number. 
 					list.remove(j); 
 				}
 			}
-
-			//System.out.println(list.get(i)); 
 		}
-
+		//Return the list. 
 		return list; 
 	}
 
@@ -37,17 +43,5 @@ public class PrimeGen
 		}
 		//Return list. 
 		return list; 
-	}
-
-
-	public static void main(String[] args)
-	{
-		PrimeGen gen = new PrimeGen(); 
-		ArrayList<Integer> arr = gen.generate(100);
-
-		for(int i=0; i<arr.size(); i++)
-		{
-			System.out.println(arr.get(i)); 
-		} 
 	}
 }
